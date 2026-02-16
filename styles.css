@@ -1,0 +1,40 @@
+/* Catizens - Custom styles */
+
+/* Hero section - soft diffused gradient: light creamy center, greenish-beige at edges */
+.hero-section {
+  background: 
+    radial-gradient(ellipse 80% 80% at 50% 40%, #F5F5ED 0%, transparent 50%),
+    radial-gradient(ellipse 120% 100% at 20% 80%, rgba(236, 239, 227, 0.9) 0%, transparent 45%),
+    radial-gradient(ellipse 100% 120% at 80% 90%, rgba(238, 240, 228, 0.85) 0%, transparent 45%),
+    radial-gradient(ellipse 90% 90% at 0% 50%, rgba(232, 235, 220, 0.95) 0%, transparent 40%),
+    radial-gradient(ellipse 90% 90% at 100% 50%, rgba(233, 236, 221, 0.95) 0%, transparent 40%),
+    linear-gradient(to bottom, #F8F7F0 0%, #F0F2E8 100%);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Prevent sticky nav from overlapping anchored sections */
+}
+
+/* Subtle focus ring for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #4f7942;
+  outline-offset: 2px;
+}
+
+/* Form placeholder styling */
+::placeholder {
+  color: rgba(51, 51, 51, 0.5);
+}
+
+/* Buttons always use body text font (Source Sans 3), never Lora */
+button,
+a[href].bg-sage-500,
+a.bg-sage-500 {
+  font-family: 'Source Sans 3', system-ui, sans-serif !important;
+}

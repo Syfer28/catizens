@@ -32,9 +32,9 @@ textarea:focus-visible {
   color: rgba(51, 51, 51, 0.5);
 }
 
-/* Buttons always use body text font (Source Sans 3), never Lora */
+/* Buttons always use body text font (SN Pro), never Lora */
 button,
 a[href].bg-sage-500,
 a.bg-sage-500 {
-  font-family: 'Source Sans 3', system-ui, sans-serif !important;
+  font-family: 'SN Pro', system-ui, sans-serif !important;
 }

@@ -32,8 +32,8 @@ const translations = {
     card3Btn: 'Заказать',
 
     // Examples
-    examplesTitle: 'Примеры наших открыток',
-    examplesSubtitle: 'Авторские иллюстрации для мамы, дедушки, латышской тематики и не только.',
+    examplesTitle: 'Каталог открыток',
+    examplesSubtitle: 'Авторские открытки для любых поводов',
 
     // Gallery items
     gallery1Title: 'Для мамы',
@@ -105,8 +105,8 @@ const translations = {
     card3Btn: 'Pasūtīt',
 
     // Examples
-    examplesTitle: 'Mūsu pastkaršu piemēri',
-    examplesSubtitle: 'Autora ilustrācijas māmiņai, vectēvam, latviešu tematikai un ne tikai.',
+    examplesTitle: 'Pastkaršu katalogs',
+    examplesSubtitle: 'Autora pastkartes jebkuram gadījumam',
 
     // Gallery
     gallery1Title: 'Māmiņai',

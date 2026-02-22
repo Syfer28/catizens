@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catizens — Уникальные авторские открытки | Catizensshop</title>
+  <meta name="description" content="Catizensshop — авторские открытки ручной работы с котиками. Готовые дизайны и индивидуальные заказы. Открытки для мамы, дедушки, латышская тематика. Rīga, Latvija.">
+  <meta name="keywords" content="catizensshop, catizens, открытки на заказ, авторские открытки, открытки с котиками, handmade открытки, подарки Рига, pastkartes, autordarba pastkartes, pastkartes ar kaķiem, Rīga">
+  <link rel="canonical" href="https://catizensshop.lv/ru/">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- hreflang for RU/LV — separate URLs -->
+  <link rel="alternate" hreflang="ru" href="https://catizensshop.lv/ru/">
+  <link rel="alternate" hreflang="lv" href="https://catizensshop.lv/lv/">
+  <link rel="alternate" hreflang="x-default" href="https://catizensshop.lv/ru/">
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://catizensshop.lv/ru/">
+  <meta property="og:title" content="Catizens — Уникальные авторские открытки">
+  <meta property="og:description" content="Открытки ручной работы с котиками для любых поводов. Готовые дизайны и индивидуальные заказы. Рига, Латвия.">
+  <meta property="og:locale" content="ru_LV">
+  <meta property="og:locale:alternate" content="lv_LV">
+  <meta property="og:image" content="https://catizensshop.lv/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Catizens — Уникальные авторские открытки">
+  <meta name="twitter:description" content="Открытки ручной работы с котиками. Готовые дизайны и индивидуальные заказы. Рига.">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Catizens",
+    "alternateName": "Catizensshop",
+    "url": "https://catizensshop.lv",
+    "logo": "https://catizensshop.lv/logo.png",
+    "description": "Авторские открытки ручной работы с котиками. Готовые дизайны и индивидуальные заказы. Рига, Латвия.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Latvia"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Catizens",
+    "alternateName": "Catizensshop",
+    "url": "https://catizensshop.lv",
+    "inLanguage": ["ru", "lv"]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/sn-pro@5.2.6/latin.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/translations.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            beige: {
+              50: '#FDFBF7',
+              100: '#FAF6EF',
+              200: '#F5F0E6',
+              300: '#EDE7DD',
+              400: '#E5DDD0',
+              cream: '#F8F4EB',
+            },
+            sage: {
+              50: '#F7F8F2',
+              100: '#F1F3E9',
+              200: '#ECEFE3',
+              300: '#E2E6D4',
+              400: '#C9D0B5',
+              500: '#4F7942',
+              600: '#456A38',
+              700: '#3B5A2F',
+              muted: '#C9D0B5',
+            },
+            ink: {
+              DEFAULT: '#4a4a4a',
+              dark: '#21292e',
+            },
+            'sage-muted': '#4F7942',
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans: ['SN Pro', 'system-ui', 'sans-serif'],
+          },
+          borderRadius: {
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '2rem',
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.06)',
+            'cozy': '0 8px 30px -4px rgba(0, 0, 0, 0.08)',
+            'nav': '0 4px 12px -2px rgba(79, 121, 66, 0.12), 0 2px 6px -1px rgba(79, 121, 66, 0.06)',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-sans text-ink bg-beige-50 antialiased">
+  <!-- Sticky Top Navigation -->
+  <nav class="sticky top-0 z-50 bg-sage-200 backdrop-blur-sm border-b border-sage-300/60 shadow-nav">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+      <a href="/ru/" class="font-serif text-2xl md:text-3xl font-bold text-ink-dark hover:text-sage-600 transition-colors z-10">
+        <img src="/logo.png" class="w-32" alt="Catizens"/>
+      </a>
+      <div class="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <a href="#about" class="text-ink hover:text-sage-600 font-normal text-base md:text-lg transition-colors" data-i18n="navAbout">О Catizens</a>
+        <a href="#examples" class="text-ink hover:text-sage-600 font-normal text-base md:text-lg transition-colors" data-i18n="navChooseDesign">Выбрать дизайн</a>
+        <a href="#custom-order" class="text-ink hover:text-sage-600 font-normal text-base md:text-lg transition-colors" data-i18n="navOrderPostcard">Заказать открытку</a>
+      </div>
+      <div class="hidden md:flex items-center gap-2 w-32 justify-end">
+        <a href="/ru/" class="lang-btn lang-ru px-2 py-1 rounded-lg text-sm font-medium transition-colors" aria-label="Русский">RU</a>
+        <a href="/lv/" class="lang-btn lang-lv px-2 py-1 rounded-lg text-sm font-medium transition-colors" aria-label="Latviešu">LV</a>
+      </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-ink hover:bg-sage-300 rounded-xl transition-colors" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-sage-100 border-t border-sage-300 px-6 py-4 space-y-3">
+      <a href="#about" class="block text-ink font-medium text-lg py-2" data-i18n="navAbout">О Catizens</a>
+      <a href="#examples" class="block text-ink font-medium text-lg py-2" data-i18n="navChooseDesign">Выбрать дизайн</a>
+      <a href="#custom-order" class="block text-ink font-medium text-lg py-2" data-i18n="navOrderPostcard">Заказать открытку</a>
+      <div class="flex gap-2 pt-2">
+        <a href="/ru/" class="lang-btn lang-ru px-3 py-1 rounded-lg text-sm font-medium">RU</a>
+        <a href="/lv/" class="lang-btn lang-lv px-3 py-1 rounded-lg text-sm font-medium">LV</a>
+      </div>
+      <a href="#custom-order" class="inline-block font-sans bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold mt-2 hover:bg-sage-600 active:bg-sage-700 transition-colors" data-i18n="heroCta">
+        Заказать открытку
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden hero-section">
+    <div class="relative max-w-4xl mx-auto px-6 py-24 text-center">
+      <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-ink-dark leading-tight mb-6" data-i18n="heroTitle" data-i18n-html>
+        Catizens – уникальные открытки<br>с авторским стилем
+      </h1>
+      <p class="text-xl md:text-2xl text-ink font-light max-w-2xl mx-auto mb-10 leading-relaxed" data-i18n="heroSubtitle">
+        Открытки ручной работы с котиками для любых поводов – от готовых дизайнов до индивидуальных заказов, которые превращают даже обычный день в особенный и дарят теплые воспоминания.
+      </p>
+      <a href="#custom-order" class="inline-block font-sans bg-sage-500 text-white px-8 py-4 rounded-3xl text-lg font-bold hover:bg-sage-600 active:bg-sage-700 transition-all shadow-cozy hover:shadow-lg hover:-translate-y-1 duration-300" data-i18n="heroCta">
+        Заказать открытку
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 md:py-32 bg-beige-200/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="bg-beige-100 rounded-4xl overflow-hidden shadow-soft flex flex-col md:flex-row items-stretch">
+        <div class="md:w-1/2 p-8 md:p-12 flex items-center justify-center">
+          <div class="aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden bg-sage-100 flex items-center justify-center">
+            <div class="text-center p-8 text-sage-600/70">
+              <svg class="w-24 h-24 mx-auto mb-4 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+              </svg>
+              <p class="font-serif text-lg italic" data-i18n="aboutPlaceholder">Эскизы котиков</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 p-8 md:p-12 md:py-16 flex flex-col justify-center">
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-ink-dark mb-6" data-i18n="aboutTitle">
+            Почему Catizens – это больше, чем просто открытки
+          </h2>
+          <p class="text-lg text-ink font-light leading-relaxed mb-6" data-i18n="aboutP1"></p>
+          <p class="text-lg text-ink font-light leading-relaxed mb-6" data-i18n="aboutP2"></p>
+          <p class="text-lg text-ink font-light leading-relaxed mb-6" data-i18n="aboutP3"></p>
+          <p class="text-lg text-ink font-light leading-relaxed mb-6" data-i18n="aboutP4"></p>
+          <p class="text-lg text-ink font-light leading-relaxed" data-i18n="aboutP5"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Options Section -->
+  <section id="order-options" class="py-24 md:py-32 bg-sage-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-ink-dark text-center mb-16" data-i18n="orderTitle">
+        Как вы хотите заказать?
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-beige-50 rounded-4xl p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-ink-dark mb-3" data-i18n="card1Title">Готовые дизайны</h3>
+          <p class="text-ink font-light mb-6 flex-grow" data-i18n="card1Text"></p>
+          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit" data-i18n="card1Btn">Выбрать</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-beige-50 rounded-4xl p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-ink-dark mb-3" data-i18n="card2Title">Готовый дизайн + ваш текст</h3>
+          <p class="text-ink font-light mb-6 flex-grow" data-i18n="card2Text"></p>
+          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit" data-i18n="card2Btn">Выбрать</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-beige-50 rounded-4xl p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-ink-dark mb-3" data-i18n="card3Title">Полностью индивидуальный дизайн</h3>
+          <p class="text-ink font-light mb-6 flex-grow" data-i18n="card3Text"></p>
+          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit" data-i18n="card3Btn">Заказать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples / Gallery Section -->
+  <section id="examples" class="py-24 md:py-32 bg-beige-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-ink-dark text-center mb-4" data-i18n="examplesTitle">
+        Примеры наших открыток
+      </h2>
+      <p class="text-center text-ink font-light text-lg mb-16 max-w-2xl mx-auto" data-i18n="examplesSubtitle">
+        Авторские иллюстрации для мамы, дедушки, латышской тематики и не только.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Gallery items - placeholder postcards -->
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+          <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center">
+            <span class="text-6xl opacity-40">🐱</span>
+          </div>
+          <div class="p-5 bg-beige-50">
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery1Title">Для мамы</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery1Sub">Трогательный подарок</p>
+          </div>
+        </div>
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+          <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center">
+            <span class="text-6xl opacity-40">🇱🇻</span>
+          </div>
+          <div class="p-5 bg-beige-50">
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery2Title">Латвийское лето</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery2Sub">Культурный колорит</p>
+          </div>
+        </div>
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+          <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center">
+            <span class="text-6xl opacity-40">🎄</span>
+          </div>
+          <div class="p-5 bg-beige-50">
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery3Title">Праздничные пожелания</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery3Sub">Праздничное настроение</p>
+          </div>
+        </div>
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+          <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center">
+            <span class="text-6xl opacity-40">👴</span>
+          </div>
+          <div class="p-5 bg-beige-50">
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery4Title">Для дедушки</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery4Sub">Тепло и забота</p>
+          </div>
+        </div>
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+          <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center">
+            <span class="text-6xl opacity-40">☕</span>
+          </div>
+          <div class="p-5 bg-beige-50">
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery5Title">Уютное кафе</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery5Sub">Расслабленная атмосфера</p>
+          </div>
+        </div>
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+          <div class="aspect-[3/4] bg-sage-100 flex items-center justify-center">
+            <span class="text-6xl opacity-40">💝</span>
+          </div>
+          <div class="p-5 bg-beige-50">
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery6Title">Индивидуальная идея</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery6Sub">Ваше видение</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Order & Contact Section -->
+  <section id="custom-order" class="py-24 md:py-32 bg-sage-100">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold text-ink-dark text-center mb-4" data-i18n="formTitle">
+        Оформить заказ
+      </h2>
+      <p class="text-center text-ink font-light text-lg mb-12" data-i18n="formSubtitle">
+        Расскажите о своей идее. Без корзины и давления – просто дружеский разговор о том, что вы хотите.
+      </p>
+      <form class="bg-beige-50 rounded-4xl p-8 md:p-10 shadow-soft space-y-6" id="contact">
+        <div>
+          <label for="name" class="block text-ink font-medium mb-2" data-i18n="formName">Ваше имя</label>
+          <input type="text" id="name" name="name" required
+            class="w-full px-4 py-3 rounded-2xl border border-sage-200 bg-white text-ink placeholder-ink/50 focus:ring-2 focus:ring-sage-300 focus:border-sage-400 outline-none transition-shadow"
+            data-i18n-placeholder="formNamePlaceholder">
+        </div>
+        <div>
+          <label for="email" class="block text-ink font-medium mb-2" data-i18n="formEmail">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-3 rounded-2xl border border-sage-200 bg-white text-ink placeholder-ink/50 focus:ring-2 focus:ring-sage-300 focus:border-sage-400 outline-none transition-shadow"
+            data-i18n-placeholder="formEmailPlaceholder">
+        </div>
+        <div>
+          <label for="order-type" class="block text-ink font-medium mb-2" data-i18n="formInterest">Что вас интересует?</label>
+          <select id="order-type" name="order-type"
+            class="w-full px-4 py-3 rounded-2xl border border-sage-200 bg-white text-ink focus:ring-2 focus:ring-sage-300 focus:border-sage-400 outline-none transition-shadow">
+            <option value="" data-i18n="formInterestOption1">Выберите вариант</option>
+            <option value="ready-made" data-i18n="formInterestOption2">Готовый дизайн</option>
+            <option value="ready-made-custom" data-i18n="formInterestOption3">Готовый дизайн + свой текст</option>
+            <option value="fully-custom" data-i18n="formInterestOption4">Полностью индивидуальный дизайн</option>
+          </select>
+        </div>
+        <div>
+          <label for="message" class="block text-ink font-medium mb-2" data-i18n="formMessage">Ваше сообщение</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full px-4 py-3 rounded-2xl border border-sage-200 bg-white text-ink placeholder-ink/50 focus:ring-2 focus:ring-sage-300 focus:border-sage-400 outline-none transition-shadow resize-none"
+            data-i18n-placeholder="formMessagePlaceholder"></textarea>
+        </div>
+        <button type="submit" class="w-full font-sans bg-sage-500 text-white py-4 rounded-2xl font-bold text-lg hover:bg-sage-600 active:bg-sage-700 transition-colors shadow-soft hover:shadow-cozy" data-i18n="formSubmit">
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-sage-100 border-t border-sage-300">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="font-serif text-2xl font-bold text-ink-dark mb-2" data-i18n="footerTitle">Catizens</p>
+      <p class="text-ink font-light text-sm" data-i18n="footerText" data-i18n-html>
+        Авторские открытки ручной работы с теплом и душой.<br>
+        Небольшой творческий проект, созданный с любовью.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // i18n — language from URL: /ru/ or /lv/
+    (function() {
+      const pathMatch = window.location.pathname.match(/\/(ru|lv)(?:\/|$)/);
+      const currentLang = pathMatch ? pathMatch[1] : 'ru';
+      document.documentElement.lang = currentLang;
+
+      function applyTranslations() {
+        const t = typeof translations !== 'undefined' ? translations[currentLang] : {};
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (t[key]) {
+            if (el.hasAttribute('data-i18n-html')) {
+              el.innerHTML = t[key];
+            } else {
+              el.textContent = t[key];
+            }
+          }
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (t[key]) el.placeholder = t[key];
+        });
+        if (t.pageTitle) document.title = t.pageTitle;
+        document.querySelector('.lang-ru')?.classList.toggle('bg-sage-300', currentLang === 'ru');
+        document.querySelector('.lang-ru')?.classList.toggle('text-sage-700', currentLang === 'ru');
+        document.querySelector('.lang-lv')?.classList.toggle('bg-sage-300', currentLang === 'lv');
+        document.querySelector('.lang-lv')?.classList.toggle('text-sage-700', currentLang === 'lv');
+      }
+      applyTranslations();
+    })();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  </script>
+</body>
+</html>

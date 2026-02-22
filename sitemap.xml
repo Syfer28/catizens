@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://catizensshop.lv/</loc>
+    <loc>https://catizensshop.lv/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://catizensshop.lv/ru/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://catizensshop.lv/lv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://catizensshop.lv/ru/"/>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://catizensshop.lv/lv/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://catizensshop.lv/ru/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://catizensshop.lv/lv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://catizensshop.lv/ru/"/>
     <lastmod>2025-02-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

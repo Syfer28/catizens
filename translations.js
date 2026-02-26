@@ -36,18 +36,24 @@ const translations = {
     examplesSubtitle: 'Авторские открытки для любых поводов',
 
     // Gallery items
-    gallery1Title: 'Для мамы',
-    gallery1Sub: 'Трогательный подарок',
-    gallery2Title: 'Латвийское лето',
-    gallery2Sub: 'Культурный колорит',
-    gallery3Title: 'Праздничные пожелания',
-    gallery3Sub: 'Праздничное настроение',
-    gallery4Title: 'Для дедушки',
-    gallery4Sub: 'Тепло и забота',
-    gallery5Title: 'Уютное кафе',
-    gallery5Sub: 'Расслабленная атмосфера',
-    gallery6Title: 'Индивидуальная идея',
-    gallery6Sub: 'Ваше видение',
+    gallery1Title: 'Счастливого Лиго!',
+    gallery1Sub: 'Открытка к празднику Лиго',
+    gallery1Desc: 'Кошечки в латышских народных костюмах кружатся в традиционном танце в честь Лиго.',
+    gallery2Title: 'В День независимости Латвии',
+    gallery2Sub: 'Бутерброд со шпротами и флагом',
+    gallery2Desc: 'Котик держит в лапках бутерброд со шпротами, украшенный флагом Латвии, и радостно празднует 18 ноября.',
+    gallery3Title: 'В День независимости Латвии',
+    gallery3Sub: 'Сахарный петушок и народные узоры',
+    gallery3Desc: 'Котик в шарфе с народными узорами держит сахарного петушка и торжественно празднует День независимости Латвии.',
+    gallery4Title: 'Сувенир из Риги',
+    gallery4Sub: 'Рижский петух',
+    gallery4Desc: 'Котик в тельняшке сидит на Рижском петухе и радостно машет лапкой гостям города.',
+    gallery5Title: 'Сувенир из Риги',
+    gallery5Sub: 'Дом Черноголовых',
+    gallery5Desc: 'Котик ловко взобрался на Дом Черноголовых и с высоты любуется красотой старинного здания.',
+
+    // Modal
+    modalOrderBtn: 'Заказать',
 
     // Form
     formTitle: 'Оформить заказ',
@@ -110,18 +116,24 @@ const translations = {
     examplesSubtitle: 'Autora pastkartes jebkuram gadījumam',
 
     // Gallery
-    gallery1Title: 'Māmiņai',
-    gallery1Sub: 'Sirsnīga dāvana',
-    gallery2Title: 'Latvijas vasara',
-    gallery2Sub: 'Kultūras kolonāts',
-    gallery3Title: 'Ziemassvētu vēlējumi',
-    gallery3Sub: 'Svētku noskaņa',
-    gallery4Title: 'Vectēvam',
-    gallery4Sub: 'Siltums un rūpes',
-    gallery5Title: 'Cozy Café',
-    gallery5Sub: 'Atvieglota atmosfēra',
-    gallery6Title: 'Individuāla ideja',
-    gallery6Sub: 'Jūsu redzējums',
+    gallery1Title: 'Priecīgus Līgo svētkus!',
+    gallery1Sub: 'Līgo svētku pastkarte',
+    gallery1Desc: 'Kaķenītes latviešu tautastērpos dejo tradicionālu latviešu deju, svinot Līgo.',
+    gallery2Title: 'Latvijas Neatkarības dienā',
+    gallery2Sub: 'Šprotu maizīte ar karogu',
+    gallery2Desc: 'Runcis tur ķepās šprotu maizīti, rotātu ar Latvijas karogu, svinot 18. novembri.',
+    gallery3Title: 'Latvijas Neatkarības dienā',
+    gallery3Sub: 'Cukurgailītis un tautas raksti',
+    gallery3Desc: 'Runcis šallē ar tautas rakstiem tur cukurgailīti un priecīgi svin Latvijas Neatkarības dienu.',
+    gallery4Title: 'Suvenīrs no Rīgas',
+    gallery4Sub: 'Rīgas Gailis',
+    gallery4Desc: 'Kaķis sēž uz Rīgas Gaiļa tērpies svītrainā jūrnieku krekliņā un māj ar ķepiņu, sveicot pilsētas viesus.',
+    gallery5Title: 'Suvenīrs no Rīgas',
+    gallery5Sub: 'Melngalvju nams',
+    gallery5Desc: 'Kaķis veikli uzrāpies uz Melngalvju nama un no augšas vēro vēsturiskā nama skaistumu.',
+
+    // Modal
+    modalOrderBtn: 'Pasūtīt',
 
     // Form
     formTitle: 'Pasūtīt',

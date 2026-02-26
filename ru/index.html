@@ -121,22 +121,24 @@
         <a href="/ru/" class="lang-btn lang-ru px-2 py-1 rounded-lg text-sm font-medium transition-colors" aria-label="Русский">RU</a>
         <a href="/lv/" class="lang-btn lang-lv px-2 py-1 rounded-lg text-sm font-medium transition-colors" aria-label="Latviešu">LV</a>
       </div>
-      <!-- Mobile menu button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 text-ink hover:bg-sage-300 rounded-xl transition-colors" aria-label="Open menu">
+      <!-- Mobile: lang switcher + menu button -->
+      <div class="md:hidden flex items-center gap-2">
+        <div class="flex gap-1">
+          <a href="/ru/" class="lang-btn lang-ru px-2 py-1 rounded-lg text-sm font-medium transition-colors" aria-label="Русский">RU</a>
+          <a href="/lv/" class="lang-btn lang-lv px-2 py-1 rounded-lg text-sm font-medium transition-colors" aria-label="Latviešu">LV</a>
+        </div>
+        <button id="mobile-menu-btn" class="p-2 text-ink hover:bg-sage-300 rounded-xl transition-colors" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
+      </div>
     </div>
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-sage-100 border-t border-sage-300 px-6 py-4 space-y-3">
       <a href="#about" class="block text-ink font-medium text-lg py-2" data-i18n="navAbout">О Catizens</a>
       <a href="#examples" class="block text-ink font-medium text-lg py-2" data-i18n="navChooseDesign">Выбрать дизайн</a>
       <a href="#custom-order" class="block text-ink font-medium text-lg py-2" data-i18n="navOrderPostcard">Заказать открытку</a>
-      <div class="flex gap-2 pt-2">
-        <a href="/ru/" class="lang-btn lang-ru px-3 py-1 rounded-lg text-sm font-medium">RU</a>
-        <a href="/lv/" class="lang-btn lang-lv px-3 py-1 rounded-lg text-sm font-medium">LV</a>
-      </div>
       <a href="#custom-order" class="inline-block font-sans bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold mt-2 hover:bg-sage-600 active:bg-sage-700 transition-colors" data-i18n="heroCta">
         Заказать открытку
       </a>
@@ -164,7 +166,7 @@
       <div class="bg-beige-100 rounded-4xl overflow-hidden shadow-soft flex flex-col md:flex-row items-stretch">
         <div class="md:w-[55%] p-8 md:p-12 flex items-center justify-center">
           <div class="aspect-[4/5] w-full max-w-xl rounded-3xl overflow-hidden bg-sage-100">
-            <img src="/img/about.jpeg" alt="Postcard Rīga — illustrated cat with lollipop" class="w-full h-full object-cover" width="600" height="750" loading="lazy">
+            <img src="/img/about.jpeg" alt="Postcard Rīga – illustrated cat with lollipop" class="w-full h-full object-cover" width="600" height="750" loading="lazy">
           </div>
         </div>
         <div class="md:w-[45%] p-8 md:p-12 md:py-16 flex flex-col justify-center">
@@ -187,39 +189,42 @@
       <h2 class="font-serif text-4xl md:text-5xl font-bold text-ink-dark text-center mb-16" data-i18n="orderTitle">
         Как вы хотите заказать?
       </h2>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
         <!-- Card 1 -->
-        <div class="bg-beige-50 rounded-4xl p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col">
-          <div class="w-14 h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-beige-50 rounded-4xl p-5 md:p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col relative">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-4 md:mb-6 shrink-0">
+            <svg class="w-6 h-6 md:w-7 md:h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
           </div>
-          <h3 class="font-serif text-2xl font-bold text-ink-dark mb-3" data-i18n="card1Title">Готовые дизайны</h3>
-          <p class="text-ink font-light mb-6 flex-grow" data-i18n="card1Text"></p>
-          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit" data-i18n="card1Btn">Выбрать</a>
+          <h3 class="font-serif text-xl md:text-2xl font-bold text-ink-dark mb-1 md:mb-2 pr-14 md:pr-0" data-i18n="card1Title">Готовые дизайны</h3>
+          <span class="order-card-price absolute top-4 right-4 md:static text-sage-600 font-semibold text-sm md:text-lg -mt-0.5 mb-2 md:mb-3 shrink-0">3,80 €</span>
+          <p class="text-ink font-light mb-4 md:mb-6 flex-grow text-sm md:text-base" data-i18n="card1Text"></p>
+          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit text-sm md:text-base" data-i18n="card1Btn">Выбрать</a>
         </div>
         <!-- Card 2 -->
-        <div class="bg-beige-50 rounded-4xl p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col">
-          <div class="w-14 h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-beige-50 rounded-4xl p-5 md:p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col relative">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-4 md:mb-6 shrink-0">
+            <svg class="w-6 h-6 md:w-7 md:h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
             </svg>
           </div>
-          <h3 class="font-serif text-2xl font-bold text-ink-dark mb-3" data-i18n="card2Title">Готовый дизайн + ваш текст</h3>
-          <p class="text-ink font-light mb-6 flex-grow" data-i18n="card2Text"></p>
-          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit" data-i18n="card2Btn">Выбрать</a>
+          <h3 class="font-serif text-xl md:text-2xl font-bold text-ink-dark mb-1 md:mb-2 pr-14 md:pr-0" data-i18n="card2Title">Готовый дизайн + ваш текст</h3>
+          <span class="order-card-price absolute top-4 right-4 md:static text-sage-600 font-semibold text-sm md:text-lg -mt-0.5 mb-2 md:mb-3 shrink-0">~5,50 €</span>
+          <p class="text-ink font-light mb-4 md:mb-6 flex-grow text-sm md:text-base" data-i18n="card2Text"></p>
+          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit text-sm md:text-base" data-i18n="card2Btn">Выбрать</a>
         </div>
         <!-- Card 3 -->
-        <div class="bg-beige-50 rounded-4xl p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col">
-          <div class="w-14 h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-beige-50 rounded-4xl p-5 md:p-8 shadow-soft hover:shadow-cozy transition-all duration-300 flex flex-col relative">
+          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-sage-300 flex items-center justify-center mb-4 md:mb-6 shrink-0">
+            <svg class="w-6 h-6 md:w-7 md:h-7 text-sage-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
             </svg>
           </div>
-          <h3 class="font-serif text-2xl font-bold text-ink-dark mb-3" data-i18n="card3Title">Полностью индивидуальный дизайн</h3>
-          <p class="text-ink font-light mb-6 flex-grow" data-i18n="card3Text"></p>
-          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit" data-i18n="card3Btn">Заказать</a>
+          <h3 class="font-serif text-xl md:text-2xl font-bold text-ink-dark mb-1 md:mb-2 pr-14 md:pr-0" data-i18n="card3Title">Полностью индивидуальный дизайн</h3>
+          <span class="order-card-price absolute top-4 right-4 md:static text-sage-600 font-semibold text-sm md:text-lg -mt-0.5 mb-2 md:mb-3 shrink-0">20+ €</span>
+          <p class="text-ink font-light mb-4 md:mb-6 flex-grow text-sm md:text-base" data-i18n="card3Text"></p>
+          <a href="#custom-order" class="inline-block font-sans text-center bg-sage-500 text-white px-5 py-2.5 rounded-2xl font-semibold hover:bg-sage-600 active:bg-sage-700 transition-colors w-fit text-sm md:text-base" data-i18n="card3Btn">Заказать</a>
         </div>
       </div>
     </div>
@@ -235,50 +240,49 @@
         Авторские открытки для любых поводов
       </p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Gallery items - placeholder postcards -->
-        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300" data-design="ligo" data-gallery="1">
           <div class="aspect-[3/4] bg-sage-100 overflow-hidden">
-            <img src="/img/1.png" alt="Открытка 1" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
+            <img src="/img/ligo.png" alt="Открытка к празднику Лиго" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
           </div>
           <div class="p-5 bg-beige-50">
-            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery1Title">Для мамы</p>
-            <p class="text-sm text-ink font-light" data-i18n="gallery1Sub">Трогательный подарок</p>
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery1Title">Счастливого Лиго!</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery1Sub">Открытка к празднику Лиго</p>
           </div>
         </div>
-        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300" data-design="independence" data-gallery="2">
           <div class="aspect-[3/4] bg-sage-100 overflow-hidden">
-            <img src="/img/2.png" alt="Открытка 2" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
+            <img src="/img/independence.png" alt="В День независимости Латвии" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
           </div>
           <div class="p-5 bg-beige-50">
-            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery2Title">Латвийское лето</p>
-            <p class="text-sm text-ink font-light" data-i18n="gallery2Sub">Культурный колорит</p>
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery2Title">В День независимости Латвии</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery2Sub">Бутерброд со шпротами и флагом</p>
           </div>
         </div>
-        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300" data-design="independence2" data-gallery="3">
           <div class="aspect-[3/4] bg-sage-100 overflow-hidden">
-            <img src="/img/3.png" alt="Открытка 3" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
+            <img src="/img/independence2.png" alt="В День независимости Латвии" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
           </div>
           <div class="p-5 bg-beige-50">
-            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery3Title">Праздничные пожелания</p>
-            <p class="text-sm text-ink font-light" data-i18n="gallery3Sub">Праздничное настроение</p>
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery3Title">В День независимости Латвии</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery3Sub">Сахарный петушок и народные узоры</p>
           </div>
         </div>
-        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300" data-design="souvenir" data-gallery="4">
           <div class="aspect-[3/4] bg-sage-100 overflow-hidden">
-            <img src="/img/4.png" alt="Открытка 4" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
+            <img src="/img/souvenir.png" alt="Сувенир из Риги" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
           </div>
           <div class="p-5 bg-beige-50">
-            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery4Title">Для дедушки</p>
-            <p class="text-sm text-ink font-light" data-i18n="gallery4Sub">Тепло и забота</p>
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery4Title">Сувенир из Риги</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery4Sub">Рижский петух</p>
           </div>
         </div>
-        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300">
+        <div class="postcard-card group rounded-4xl overflow-hidden shadow-soft bg-beige-200/50 hover:shadow-cozy hover:-translate-y-2 transition-all duration-300" data-design="souvenir2" data-gallery="5">
           <div class="aspect-[3/4] bg-sage-100 overflow-hidden">
-            <img src="/img/5.png" alt="Открытка 5" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
+            <img src="/img/souvenir2.png" alt="Сувенир из Риги" class="w-full h-full object-cover" width="400" height="533" loading="lazy">
           </div>
           <div class="p-5 bg-beige-50">
-            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery5Title">Уютное кафе</p>
-            <p class="text-sm text-ink font-light" data-i18n="gallery5Sub">Расслабленная атмосфера</p>
+            <p class="font-serif text-lg font-bold text-ink-dark" data-i18n="gallery5Title">Сувенир из Риги</p>
+            <p class="text-sm text-ink font-light" data-i18n="gallery5Sub">Дом Черноголовых</p>
           </div>
         </div>
       </div>
@@ -315,23 +319,24 @@
             <option value="ready-made-custom" data-i18n="formInterestOption3">Готовый дизайн + свой текст</option>
             <option value="fully-custom" data-i18n="formInterestOption4">Полностью индивидуальный дизайн</option>
           </select>
+          <p id="order-price" class="text-sage-600 font-semibold text-base mt-2">3,80 €</p>
           <div id="design-picker-wrap" class="mt-4">
             <p class="text-sm text-ink font-light mb-2" data-i18n="formDesignPickerLabel">Выберите открытку</p>
             <div class="flex flex-wrap gap-2" id="design-picker">
-              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="1" aria-pressed="false">
-                <img src="/img/1.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
+              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="ligo" aria-pressed="false">
+                <img src="/img/ligo.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
               </button>
-              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="2" aria-pressed="false">
-                <img src="/img/2.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
+              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="independence" aria-pressed="false">
+                <img src="/img/independence.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
               </button>
-              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="3" aria-pressed="false">
-                <img src="/img/3.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
+              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="independence2" aria-pressed="false">
+                <img src="/img/independence2.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
               </button>
-              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="4" aria-pressed="false">
-                <img src="/img/4.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
+              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="souvenir" aria-pressed="false">
+                <img src="/img/souvenir.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
               </button>
-              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="5" aria-pressed="false">
-                <img src="/img/5.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
+              <button type="button" class="design-thumb w-16 h-20 rounded-xl overflow-hidden border-2 border-transparent hover:border-sage-400 focus:border-sage-500 focus:ring-2 focus:ring-sage-300 transition-all flex-shrink-0" data-design="souvenir2" aria-pressed="false">
+                <img src="/img/souvenir2.png" alt="" class="w-full h-full object-cover" width="64" height="80" loading="lazy">
               </button>
             </div>
             <input type="hidden" name="selected-design" id="selected-design" value="">
@@ -349,6 +354,26 @@
       </form>
     </div>
   </section>
+
+  <!-- Postcard Modal -->
+  <div id="postcard-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card">
+      <div class="relative bg-sage-100 overflow-hidden rounded-t-[2rem] flex items-center justify-center">
+        <img id="modal-img" src="" alt="" class="max-h-[55vh] w-auto mx-auto block scale-125">
+        <button id="modal-close" type="button" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/90 shadow-soft flex items-center justify-center text-ink hover:bg-white transition-colors shrink-0" aria-label="Закрыть">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="p-6 space-y-3">
+        <h3 id="modal-title" class="font-serif text-2xl font-bold text-ink-dark"></h3>
+        <p id="modal-desc" class="text-ink font-light leading-relaxed"></p>
+        <p class="font-serif text-xl font-bold text-sage-600">3,80 €</p>
+        <button id="modal-order-btn" class="w-full font-sans bg-sage-500 text-white py-3 rounded-2xl font-bold text-lg hover:bg-sage-600 active:bg-sage-700 transition-colors shadow-soft" data-i18n="modalOrderBtn">
+          Заказать
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="py-12 bg-sage-100 border-t border-sage-300">
@@ -385,10 +410,14 @@
           if (t[key]) el.placeholder = t[key];
         });
         if (t.pageTitle) document.title = t.pageTitle;
-        document.querySelector('.lang-ru')?.classList.toggle('bg-sage-300', currentLang === 'ru');
-        document.querySelector('.lang-ru')?.classList.toggle('text-sage-700', currentLang === 'ru');
-        document.querySelector('.lang-lv')?.classList.toggle('bg-sage-300', currentLang === 'lv');
-        document.querySelector('.lang-lv')?.classList.toggle('text-sage-700', currentLang === 'lv');
+        document.querySelectorAll('.lang-ru').forEach(el => {
+          el.classList.toggle('bg-sage-300', currentLang === 'ru');
+          el.classList.toggle('text-sage-700', currentLang === 'ru');
+        });
+        document.querySelectorAll('.lang-lv').forEach(el => {
+          el.classList.toggle('bg-sage-300', currentLang === 'lv');
+          el.classList.toggle('text-sage-700', currentLang === 'lv');
+        });
       }
       applyTranslations();
     })();
@@ -409,10 +438,24 @@
     const selectedDesignInput = document.getElementById('selected-design');
     const designThumbs = document.querySelectorAll('.design-thumb');
 
+    function selectDesignThumb(designId) {
+      designThumbs.forEach(b => { b.classList.remove('border-sage-500'); b.setAttribute('aria-pressed', 'false'); });
+      const target = document.querySelector(`.design-thumb[data-design="${designId}"]`);
+      if (target) {
+        target.classList.add('border-sage-500');
+        target.setAttribute('aria-pressed', 'true');
+        selectedDesignInput.value = designId;
+      }
+    }
+
+    const orderPrices = { 'ready-made': '3,80 €', 'ready-made-custom': '~5,50 €', 'fully-custom': '20+ €' };
+    const orderPriceEl = document.getElementById('order-price');
+
     function toggleDesignPicker() {
       const v = orderType.value;
       const show = v === 'ready-made' || v === 'ready-made-custom';
       designPickerWrap.style.display = show ? 'block' : 'none';
+      if (orderPriceEl) orderPriceEl.textContent = orderPrices[v] || '';
       if (!show) {
         selectedDesignInput.value = '';
         designThumbs.forEach(btn => { btn.classList.remove('border-sage-500'); btn.setAttribute('aria-pressed', 'false'); });
@@ -422,16 +465,68 @@
     }
 
     designThumbs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        designThumbs.forEach(b => { b.classList.remove('border-sage-500'); b.setAttribute('aria-pressed', 'false'); });
-        btn.classList.add('border-sage-500');
-        btn.setAttribute('aria-pressed', 'true');
-        selectedDesignInput.value = btn.dataset.design;
-      });
+      btn.addEventListener('click', () => selectDesignThumb(btn.dataset.design));
     });
 
     orderType.addEventListener('change', toggleDesignPicker);
     toggleDesignPicker();
+
+    // Postcard modal
+    const modal = document.getElementById('postcard-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalCloseBtn = document.getElementById('modal-close');
+    const modalOrderBtn = document.getElementById('modal-order-btn');
+    let currentDesignId = null;
+
+    const pathMatch = window.location.pathname.match(/\/(ru|lv)(?:\/|$)/);
+    const lang = pathMatch ? pathMatch[1] : 'ru';
+    const t = typeof translations !== 'undefined' ? translations[lang] : {};
+
+    function openModal(card) {
+      const galleryIdx = card.dataset.gallery;
+      currentDesignId = card.dataset.design;
+      const imgSrc = card.querySelector('img').src;
+
+      modalImg.src = imgSrc;
+      modalImg.alt = t['gallery' + galleryIdx + 'Title'] || '';
+      modalTitle.textContent = t['gallery' + galleryIdx + 'Title'] || '';
+      modalDesc.textContent = t['gallery' + galleryIdx + 'Desc'] || '';
+
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.postcard-card[data-design]').forEach(card => {
+      card.addEventListener('click', () => openModal(card));
+    });
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+
+    modalOrderBtn.addEventListener('click', () => {
+      const designId = currentDesignId;
+      closeModal();
+
+      orderType.value = 'ready-made';
+      toggleDesignPicker();
+      if (designId) selectDesignThumb(designId);
+
+      document.getElementById('custom-order').scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 </body>
 </html>

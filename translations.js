@@ -76,6 +76,9 @@ const translations = {
     formCriteria2: '• текст, который нужно разместить на открытке\n• количество открыток\n• компанию пакомата (Omniva / DPD / Venipak)\n• точное название или адрес пакомата\n• город\n• свой номер телефона',
     formCriteria3: '• внешность котика (цвет, особенности, пушистость и т.д.)\n• возраст (котёнок, взрослый, кот в возрасте)\n• настроение котика\n• во что он одет\n• что делает или что держит в лапках\n• повод и любые важные детали',
     formSubmit: 'Отправить заявку',
+    formSending: 'Отправка...',
+    formSuccess: 'Отправлено!',
+    formError: 'Ошибка отправки. Попробуйте позже.',
 
     // Footer
     footerTitle: 'Catizens',
@@ -161,6 +164,9 @@ const translations = {
     formCriteria2: '• tekstu, kuru vēlaties izvietot uz pastkartes\n• pastkaršu skaitu\n• pakomāta uzņēmumu (Omniva / DPD / Venipak)\n• precīzu pakomāta nosaukumu vai adresi\n• pilsētu\n• savu tālruņa numuru',
     formCriteria3: '• kaķa izskatu (krāsa, īpašas pazīmes, spalvas kuplums u.c.)\n• vecumu (kaķēns, pieaudzis kaķis, cienījams runcis)\n• kaķa noskaņojumu\n• apģērbu (ja tāds ir)\n• ko viņš dara vai ko tur ķepās\n• notikumu un jebkādas svarīgas detaļas',
     formSubmit: 'Nosūtīt pieprasījumu',
+    formSending: 'Nosūta...',
+    formSuccess: 'Nosūtīts!',
+    formError: 'Sūtīšanas kļūda. Mēģiniet vēlreiz.',
 
     // Footer
     footerTitle: 'Catizens',

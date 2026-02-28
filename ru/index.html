@@ -548,6 +548,55 @@
 
       document.getElementById('custom-order').scrollIntoView({ behavior: 'smooth' });
     });
+
+    // Form submit — Resend
+    document.getElementById('contact')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const pathMatch = window.location.pathname.match(/\/(ru|lv)(?:\/|$)/);
+      const lang = pathMatch ? pathMatch[1] : 'ru';
+      const t = typeof translations !== 'undefined' ? translations[lang] : {};
+
+      // Minimal validation
+      const nameVal = (form.name?.value || '').trim();
+      const emailVal = (form.email?.value || '').trim();
+      const messageVal = (form.message?.value || '').trim();
+      if (!nameVal) { form.name?.focus(); return; }
+      if (!emailVal) { form.email?.focus(); return; }
+      if (!messageVal) { form.message?.focus(); return; }
+
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = t.formSending || 'Отправка...';
+
+      try {
+        const formData = new FormData(form);
+        const body = Object.fromEntries(formData.entries());
+
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok) {
+          btn.textContent = t.formSuccess || 'Отправлено!';
+          form.reset();
+          toggleDesignPicker();
+        } else {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          alert(data.error || t.formError || 'Ошибка отправки.');
+        }
+      } catch (err) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        alert(t.formError || 'Ошибка отправки. Проверьте интернет.');
+      }
+    });
   </script>
 </body>
 </html>

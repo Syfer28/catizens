@@ -70,6 +70,11 @@ const translations = {
     formInterestOption4: 'Полностью индивидуальный дизайн',
     formMessage: 'Ваше сообщение',
     formMessagePlaceholder: 'Опишите идею – кому открытка, по какому поводу, особые детали, или просто поздоровайтесь!',
+    formMessagePlaceholderReady: 'В сообщении укажите детали по критериям, написанным сверху',
+    formMessagePlaceholderIdea: 'Опишите вашу идею по критериям, написанным сверху',
+    formCriteria1: '• количество открыток\n• компанию пакомата (Omniva / DPD / Smartpost)\n• точное название или адрес пакомата\n• город\n• свой номер телефона',
+    formCriteria2: '• текст, который нужно разместить на открытке\n• количество открыток\n• компанию пакомата (Omniva / DPD / Venipak)\n• точное название или адрес пакомата\n• город\n• свой номер телефона',
+    formCriteria3: '• внешность котика (цвет, особенности, пушистость и т.д.)\n• возраст (котёнок, взрослый, кот в возрасте)\n• настроение котика\n• во что он одет\n• что делает или что держит в лапках\n• повод и любые важные детали',
     formSubmit: 'Отправить заявку',
 
     // Footer
@@ -139,7 +144,7 @@ const translations = {
     formTitle: 'Pasūtīt',
     formSubtitle: 'Pastāstiet par savu ideju. Bez groza un spiediena - tikai draudzīga saruna par to, ko vēlaties.',
     formName: 'Jūsu vārds',
-    formNamePlaceholder: 'Kā uz jums viegli piezvanīt?',
+    formNamePlaceholder: 'Kā Jūs uzrunāt?',
     formEmail: 'Email',
     formEmailPlaceholder: 'Jūsu email',
     formInterest: 'Kas jūs interesē?',
@@ -150,6 +155,11 @@ const translations = {
     formInterestOption4: 'Pilnībā individuāls dizains',
     formMessage: 'Jūsu ziņojums',
     formMessagePlaceholder: 'Aprakstiet ideju - kam pastkarte, kādam gadījumam, īpašas detaļas, vai vienkārši sasveicinieties!',
+    formMessagePlaceholderReady: 'Ziņojumā norādiet detaļas saskaņā ar augšā norādītajiem kritērijiem',
+    formMessagePlaceholderIdea: 'Aprakstiet savu ideju saskaņā ar augšā norādītajiem kritērijiem',
+    formCriteria1: '• pastkaršu skaitu\n• pakomāta uzņēmumu (Omniva / DPD / Smartpost)\n• precīzu pakomāta nosaukumu vai adresi\n• pilsētu\n• savu tālruņa numuru',
+    formCriteria2: '• tekstu, kuru vēlaties izvietot uz pastkartes\n• pastkaršu skaitu\n• pakomāta uzņēmumu (Omniva / DPD / Venipak)\n• precīzu pakomāta nosaukumu vai adresi\n• pilsētu\n• savu tālruņa numuru',
+    formCriteria3: '• kaķa izskatu (krāsa, īpašas pazīmes, spalvas kuplums u.c.)\n• vecumu (kaķēns, pieaudzis kaķis, cienījams runcis)\n• kaķa noskaņojumu\n• apģērbu (ja tāds ir)\n• ko viņš dara vai ko tur ķepās\n• notikumu un jebkādas svarīgas detaļas',
     formSubmit: 'Nosūtīt pieprasījumu',
 
     // Footer

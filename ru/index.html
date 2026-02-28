@@ -344,6 +344,7 @@
         </div>
         <div>
           <label for="message" class="block text-ink font-medium mb-2" data-i18n="formMessage">Ваше сообщение</label>
+          <div id="order-criteria" class="mb-3 px-4 py-3 rounded-xl bg-sage-50 border border-sage-200 text-ink text-sm font-light whitespace-pre-line"></div>
           <textarea id="message" name="message" rows="5" required
             class="w-full px-4 py-3 rounded-2xl border border-sage-200 bg-white text-ink placeholder-ink/50 focus:ring-2 focus:ring-sage-300 focus:border-sage-400 outline-none transition-shadow resize-none"
             data-i18n-placeholder="formMessagePlaceholder"></textarea>
@@ -450,12 +451,32 @@
 
     const orderPrices = { 'ready-made': '3,80 €', 'ready-made-custom': '~5,50 €', 'fully-custom': '20+ €' };
     const orderPriceEl = document.getElementById('order-price');
+    const orderCriteriaEl = document.getElementById('order-criteria');
+    const messageInput = document.getElementById('message');
+    const criteriaKeys = { 'ready-made': 'formCriteria1', 'ready-made-custom': 'formCriteria2', 'fully-custom': 'formCriteria3' };
+    const placeholderKeys = { 'ready-made': 'formMessagePlaceholderReady', 'ready-made-custom': 'formMessagePlaceholderReady', 'fully-custom': 'formMessagePlaceholderIdea' };
+
+    function updateOrderCriteria() {
+      const v = orderType.value;
+      const pathMatch = window.location.pathname.match(/\/(ru|lv)(?:\/|$)/);
+      const currentLang = pathMatch ? pathMatch[1] : 'ru';
+      const t = typeof translations !== 'undefined' ? translations[currentLang] : {};
+      const key = criteriaKeys[v];
+      if (orderCriteriaEl && key && t[key]) {
+        orderCriteriaEl.textContent = t[key];
+      }
+      const phKey = placeholderKeys[v];
+      if (messageInput && phKey && t[phKey]) {
+        messageInput.placeholder = t[phKey];
+      }
+    }
 
     function toggleDesignPicker() {
       const v = orderType.value;
       const show = v === 'ready-made' || v === 'ready-made-custom';
       designPickerWrap.style.display = show ? 'block' : 'none';
       if (orderPriceEl) orderPriceEl.textContent = orderPrices[v] || '';
+      updateOrderCriteria();
       if (!show) {
         selectedDesignInput.value = '';
         designThumbs.forEach(btn => { btn.classList.remove('border-sage-500'); btn.setAttribute('aria-pressed', 'false'); });

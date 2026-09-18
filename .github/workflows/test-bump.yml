@@ -1,0 +1,22 @@
+name: test-bump
+
+# Manual trigger only, so the test never fires on its own.
+on:
+  workflow_dispatch:
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.BUMP_SSH_KEY }}
+
+      - name: Commit and push to the default branch
+        run: |
+          git config user.name "bump key test"
+          git config user.email "bump-key-test@example.com"
+          date -u > bump-test.txt
+          git add bump-test.txt
+          git commit -m "test bump [skip ci]"
+          git push
